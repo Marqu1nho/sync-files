@@ -1,0 +1,12 @@
+# for .zshrc file
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats 'on %F{magenta}%b%f%u'
+
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+# directory name
+PS1='%F{123}(%1~)%f %B${vcs_info_msg_0_}%b: ';
+export PS1;
