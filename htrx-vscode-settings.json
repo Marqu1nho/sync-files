@@ -1,0 +1,50 @@
+{
+    "explorer.confirmDelete": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "jupyter.askForKernelRestart": false,
+    "aws.telemetry": false,
+    "explorer.confirmDragAndDrop": false,
+    "yaml.schemas": {
+        "file:///c%3A/Users/marco.perez/.vscode/extensions/atlassian.atlascode-3.4.11/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "redhat.telemetry.enabled": true,
+    "workbench.settings.applyToAllProfiles": [
+
+    ],
+    "git.enableSmartCommit": true,
+    "python.defaultInterpreterPath": "c:\\Users\\marco.perez\\Downloads\\delete_me_venv\\Scripts\\python.exe",
+    "editor.mouseWheelZoom": true,
+    "editor.fontSize": 11,
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontLigatures": true,
+    "git.confirmSync": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Windows PowerShell": {
+            "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        }
+    },
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontLigatures.enabled":true,
+    "terminal.integrated.gpuAcceleration": "auto",
+    "workbench.colorCustomizations": {
+        "terminal.background":"#1d2121",
+    }
+
+}
