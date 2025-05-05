@@ -1,0 +1,112 @@
+{
+    "workbench.list.smoothScrolling": true,
+    "workbench.list.openMode": "doubleClick",
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.fontSize": 12,
+    "search.sortOrder": "type",
+    "notebook.lineNumbers": "on",
+    "explorer.sortOrder": "type",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.autoReveal": false,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "jupyter.askForKernelRestart": false,
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "debug.console.closeOnEnd": true,
+    "editor.mouseWheelZoom": true,
+    "editor.formatOnSave": true,
+    "editor.smoothScrolling": true,
+    "editor.suggest.showConstructors": false,
+    "editor.suggest.showMethods": false,
+    "editor.accessibilitySupport": "off",
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.snippetSuggestions": "top",
+    "[python]": {
+        "editor.rulers": [
+            88,
+        ],
+        "editor.formatOnSaveMode": "file",
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "[sql]": {
+        "editor.tabSize": 2,
+        "editor.rulers": [
+            80
+        ]
+    },
+    "[snowflake-sql]": {
+        "editor.tabSize": 2,
+        "editor.rulers": [
+            80
+        ]
+    },
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.rulers": [
+            80
+        ]
+    },
+    "terminal.integrated.inheritEnv": false,
+    "yaml.schemas": {
+        "file:///Users/marcoperez/.vscode/extensions/atlassian.atlascode-3.4.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "redhat.telemetry.enabled": true,
+    "yaml.customTags": [
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ],
+    "git.openRepositoryInParentFolders": "always",
+    "python.defaultInterpreterPath": "/Users/marcoperez/.local/share/virtualenvs/streamlit-6MiZ3qWS/bin/python",
+    "oneDarkPro.vivid": false,
+    "git.confirmSync": false,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "snowflake.connectionsConfigFile": "/Users/marcoperez/.snowflake/connections.toml",
+    "workbench.activityBar.location": "bottom",
+    "files.exclude": {
+        "**/.git": false,
+        "**/.hg": false,
+        "**/.svn": false,
+        "**/CVS": false,
+        "**/Thumbs.db": false
+    },
+    "terminal.integrated.allowedLinkSchemes": [
+        "file",
+        "http",
+        "https",
+        "mailto",
+        "vscode",
+        "vscode-insiders",
+        "docker-desktop"
+    ],
+    "editor.rulers": [],
+    "chat.commandCenter.enabled": false,
+}
