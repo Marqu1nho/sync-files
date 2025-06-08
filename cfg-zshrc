@@ -1,12 +1,36 @@
-# for .zshrc file
-autoload -Uz vcs_info
-precmd() { vcs_info }
 
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats 'on %F{magenta}%b%f%u'
+# Added by Windsurf
+export PATH="/Users/marcop/.codeium/windsurf/bin:$PATH"
+# function for setting aws profile
+function awsenv() {
+  export AWS_PROFILE=$1
+  echo "Switched to profile: $AWS_PROFILE"
+}
+# python alias
+alias py="/usr/bin/env python3"
+# git commands
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add ."
+alias gc="git commit"
+alias gw="git switch -"
+alias gd="git diff --name-only HEAD..main"
+alias gnb="git checkout -b"
+alias gl="git pull"
+alias gp="git push"
+# oh-my-posh
+alias omp='oh-my-posh'
 
-# Set up the prompt (with git branch name)
-setopt PROMPT_SUBST
-# directory name
-PS1='%F{123}(%1~)%f %B${vcs_info_msg_0_}%b: ';
-export PS1;
+# venv
+alias vd="deactivate"
+alias va="source .venv/bin/activate"
+alias nv='uv venv -p'
+# terminal shortcuts
+alias cl="clear"
+plugins=(git virtualenv zsh-autosuggestions) # Add 'virtualenv'
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/powerlevel10k_classic.omp.json)"
+  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/stelbent-compact.minimal.omp.json)"
+
+fi
