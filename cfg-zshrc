@@ -24,7 +24,8 @@ alias omp='oh-my-posh'
 # venv
 alias vd="deactivate"
 alias va="source .venv/bin/activate"
-alias nv='uv venv -p'
+alias vn='uv venv -p'
+alias vpi='uv pip install'
 # terminal shortcuts
 alias cl="clear"
 plugins=(git virtualenv zsh-autosuggestions) # Add 'virtualenv'
