@@ -1,0 +1,129 @@
+version: 3
+$schema: "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+blocks:
+  - alignment: left
+    type: prompt
+    segments:
+      - type: os
+        style: diamond
+        background: "#34BFC2"
+        foreground: "#333333"
+        leading_diamond: "╭─"
+        trailing_diamond: "\ue0b0"
+        template: "{{.Icon}} {{.UserName}}"
+        properties:
+          linux: "\ue712"
+          macos: "\ue711"
+          windows: "\ue70f"
+      - type: path
+        style: diamond
+        background: "#333333"
+        foreground: "#34BFC2"
+        leading_diamond: "<transparent,background>\ue0b0</>"
+        trailing_diamond: "\ue0b0"
+        template: " \uf07b\uea9c {{ .Path }}"
+        properties:
+          folder_icon: " \uf07b "
+          home_icon: "\ue617 "
+          style: agnoster
+      - type: git
+        style: diamond
+        background: "#333333"
+        background_templates:
+          - "{{ if or (.Working.Changed) (.Staging.Changed) }}#133323{{ end }}"
+          - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#c5e478{{ end }}"
+          - "{{ if gt .Ahead 0 }}#4e585f{{ end }}"
+          - "{{ if gt .Behind 0 }}#C792EA{{ end }}"
+        foreground: "#34BFC2"
+        leading_diamond: "<transparent,background>\ue0b0</>"
+        trailing_diamond: "\ue0b0"
+        template: " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#ef5350> \uf046 {{ .Staging.String }}</>{{ end }} "
+        properties:
+          branch_icon: "\ue725 "
+          fetch_status: true
+          fetch_upstream_icon: true
+      - type: python
+        style: diamond
+        background: "#34BFC2"
+        foreground: "#333333"
+        leading_diamond: "<transparent,background>\ue0b0</>"
+        trailing_diamond: "\ue0b4"
+        template: " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Major }}.{{ .Minor}} {{ end }}"
+
+  # - alignment: right
+  #   type: prompt
+  #   segments:
+  #     - type: go
+  #       style: diamond
+  #       background: "#ffffff"
+  #       foreground: "#06aad5"
+  #       leading_diamond: "\ue0b6"
+  #       trailing_diamond: "\ue0b4 "
+  #       template: "\ue626 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+  #     - type: rust
+  #       style: diamond
+  #       background: "#f3f0ec"
+  #       foreground: "#925837"
+  #       leading_diamond: "\ue0b6"
+  #       trailing_diamond: "\ue0b4 "
+  #       template: "\ue7a8 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+  #     - type: kubectl
+  #       style: diamond
+  #       background: "#316ce4"
+  #       foreground: "#ffffff"
+  #       leading_diamond: "\ue0b6"
+  #       trailing_diamond: "\ue0b4"
+  #       template: "\uf308 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}"
+
+  #     - type: executiontime
+  #       style: diamond
+  #       background: "#333333"
+  #       foreground: "#34BFC2"
+  #       leading_diamond: "\ue0b2"
+  #       trailing_diamond: "<transparent,background>\ue0b2</>"
+  #       template: " \ueba2 {{ .FormattedMs }}\u2800"
+  #       properties:
+  #         style: roundrock
+  #         threshold: 0
+  #     - type: battery
+  #       style: powerline
+  #       background: "#333333"
+  #       foreground: "#34BFC2"
+  #       invert_powerline: true
+  #       powerline_symbol: "\ue0b2"
+  #       background_templates:
+  #         - "{{if eq \"Charging\" .State.String}}#333333{{end}}"
+  #         - "{{if eq \"Discharging\" .State.String}}#fff34e{{end}}"
+  #         - "{{if eq \"Full\" .State.String}}#333333{{end}}"
+  #       template: " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 "
+  #       properties:
+  #         charged_icon: "\uf240 "
+  #         charging_icon: "\uf1e6 "
+  #         discharging_icon: "\ue234 "
+  #     - type: time
+  #       style: diamond
+  #       background: "#333333"
+  #       foreground: "#34BFC2"
+  #       invert_powerline: true
+  #       leading_diamond: "\ue0b2"
+  #       trailing_diamond: "\ue0b4"
+  #       template: " \uf073 {{ .CurrentDate | date .Format }} "
+  #       properties:
+  #         time_format: "Mon-2|34pm"
+
+  - alignment: left
+    newline: true
+    type: prompt
+    segments:
+      - type: text
+        style: plain
+        foreground: "#34BFC2"
+        template: "╰─"
+      - type: status
+        style: plain
+        foreground: "#e0f8ff"
+        foreground_templates:
+          - "{{ if gt .Code 0 }}#ef5350{{ end }}"
+        template: "\ue285\ueab6 "
+        properties:
+          always_enabled: true
